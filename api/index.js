@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import router from "./routes/user-router";
+import userRouter from "./routes/user-router.js";
 dotenv.config();
 
 mongoose
@@ -24,4 +24,4 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/api/user", router);
+app.use("/api/user", userRouter);
